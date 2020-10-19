@@ -4,7 +4,6 @@ public class SolarThing{
     private double angle;
     private double diameter;
     private String colour;
-    private SolarSystem world;
 
     public SolarThing(double orbitDistance, double orbitAngle, double objectDiameter, String col, SolarSystem world)
     {
@@ -12,16 +11,7 @@ public class SolarThing{
         angle = orbitAngle;
         diameter = objectDiameter;
         colour = col;
-        world = world;
 
-        world.drawSolarObject(orbitDistance, orbitAngle, objectDiameter, col);
-
-    
+        // world.drawSolarObject(orbitDistance, orbitAngle, objectDiameter, col);
     }
-
-
-
-
-
-
 }
