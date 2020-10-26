@@ -1,18 +1,26 @@
 public class Moon extends SolarThing{
 
     private String name;
-    private double orbitalDistance;
-    private double orbitalAngle;
+    private double distance;
+    private double angle;
+    private Planet parentPlanet;
+    private double velocity;
 
-    public Moon(String moonID, double orbitalDistance, double orbitalAngle, double distance, double angle, double diameter, String colour, SolarSystem solarSystem)
+    public Moon(String moonID, double moonDistance,double diameter, String colour, SolarSystem solarSystem, Planet parent, double v)
     {
-        super(distance, angle, diameter, colour, solarSystem);
+        super(diameter, colour, solarSystem);
 
         name = moonID;
-        orbitalDistance = orbitalDistance;
-        orbitalAngle = orbitalAngle;
+        distance = moonDistance;
+        parentPlanet = parent;
+        velocity = v;
 
-        solarSystem.drawSolarObjectAbout(orbitalDistance, orbitalAngle, diameter, colour, distance, angle);
-        // solarSystem.drawSolarObject(distance, angle, diameter, colour);
+        solarSystem.drawSolarObjectAbout(distance, 0.0, diameter, colour, parent.getDistance(), parent.getAngle());
+    }
+
+    public void move()
+    {
+        angle += velocity;
+        solarWorld.drawSolarObjectAbout(distance, angle, diameter, colour, parentPlanet.getDistance(), parentPlanet.getAngle());
     }
 }

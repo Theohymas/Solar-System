@@ -1,12 +1,34 @@
 public class Planet extends SolarThing{
 
     private String name;
+    private double angle;
+    private double distance;
+    private double velocity;
 
-    public Planet(String planetID, double distance, double angle, double diameter, String colour, SolarSystem solarSystem)
+    public Planet(String planetID, double planetDistance, double diameter, String colour, SolarSystem solarSystem, double v)
     {
-        super(distance, angle, diameter, colour, solarSystem);
+        super(diameter, colour, solarSystem);
 
         name = planetID;
-        solarSystem.drawSolarObject(distance, angle, diameter, colour);
+        distance = planetDistance;
+        velocity = v;
+
+        solarSystem.drawSolarObject(distance, 0.0, diameter, colour);
+    }
+
+    public void move()
+    {
+        angle += velocity;
+        solarWorld.drawSolarObject(distance, angle, diameter, colour);
+    }
+
+    public double getDistance()
+    {
+        return this.distance;
+    }
+
+    public double getAngle()
+    {
+        return this.angle;
     }
 }
