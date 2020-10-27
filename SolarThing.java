@@ -1,29 +1,33 @@
 public class SolarThing{
 
-    // double distance;
     double diameter;
     String colour;
-    // double velocity;
-    // private double angle;
     SolarSystem solarWorld;
 
-
-    public SolarThing(double objectDiameter, String col, SolarSystem world)
+	/**
+	 * @param objectDiameter The diameter of the object in the solar system.
+	 * @param col the colour of the object in the solar system.
+	 * @param world the solar system in which the object exists.
+	 */
+    public SolarThing(double distance, double objectDiameter, String col, SolarSystem world)
     {
         diameter = objectDiameter;
         colour = col;
-        // velocity = objectVelolicty;
         solarWorld = world;
+
+        world.drawSolarObject(distance, 0.0, diameter, colour);
     }
 
-    // public void move()
-    // {
-    //     this.angle += velocity;
-    //     solarWorld.drawSolarObject(distance, angle, diameter, colour);
-    // }
+    public SolarThing(double moonDistance, double planetDistance, double objectDiameter, String col, SolarSystem world)
+    {
+        diameter = objectDiameter;
+        colour = col;
+        solarWorld = world;
+
+        world.drawSolarObjectAbout(moonDistance, 0.0, diameter, colour, planetDistance, 0.0);
+    }
 
     public void move()
     {
-        System.out.println("move called from SolarThing class");
     }
 }

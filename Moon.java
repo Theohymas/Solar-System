@@ -6,9 +6,9 @@ public class Moon extends SolarThing{
     private Planet parentPlanet;
     private double velocity;
 
-    public Moon(String moonID, double moonDistance,double diameter, String colour, SolarSystem solarSystem, Planet parent, double v)
+    public Moon(String moonID, double moonDistance, double diameter, String colour, SolarSystem solarSystem, Planet parent, double v)
     {
-        super(diameter, colour, solarSystem);
+        super(moonDistance, parent.getDistance(), diameter, colour, solarSystem);
 
         name = moonID;
         distance = moonDistance;

@@ -7,13 +7,11 @@ public class Planet extends SolarThing{
 
     public Planet(String planetID, double planetDistance, double diameter, String colour, SolarSystem solarSystem, double v)
     {
-        super(diameter, colour, solarSystem);
+        super(planetDistance, diameter, colour, solarSystem);
 
         name = planetID;
         distance = planetDistance;
         velocity = v;
-
-        solarSystem.drawSolarObject(distance, 0.0, diameter, colour);
     }
 
     public void move()
