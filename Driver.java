@@ -21,6 +21,10 @@ public class Driver{
         Moon callisto = new Moon("Callisto", 31, 2.0, "LIGHT_GREY", world, jupiter, 1.9);
         Moon ganymede = new Moon("Ganymede", 34, 2.0, "LIGHT_GREY", world, jupiter, 1.5);
 
+        Moon uranusMoon = new Moon("Uranus moon", 28, 2.0, "LIGHT_GREY", world, uranus, 1.5);
+
+        Moon neptuneMoon= new Moon("Neptune moon", 20, 4.0, "LIGHT_GREY", world, neptune, 1.5);
+
         ArrayList<SolarThing> solarList = new ArrayList<SolarThing>();
 
         solarList.add(mercury);
@@ -37,6 +41,10 @@ public class Driver{
         solarList.add(lo);
         solarList.add(callisto);
         solarList.add(ganymede);
+
+        solarList.add(uranusMoon);
+
+        solarList.add(neptuneMoon);
 
 
         while(true)

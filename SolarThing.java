@@ -7,8 +7,8 @@ abstract  class SolarThing{
 	/**
 	 * @param distance The distance of the object to the sun.
 	 * @param objectDiameter The diameter of the object in the solar system.
-	 * @param col the colour of the object in the solar system.
-	 * @param world the solar system in which the object exists.
+	 * @param col The colour of the object in the solar system.
+	 * @param world The solar system in which the object exists.
 	 */
     public SolarThing(double distance, double objectDiameter, String col, SolarSystem world)
     {
@@ -18,16 +18,6 @@ abstract  class SolarThing{
 
         world.drawSolarObject(distance, 0.0, diameter, colour);
     }
-
-    public SolarThing(double distance, double objectDiameter, String col, SolarSystem world, Planet parent)
-    {
-        diameter = objectDiameter;
-        colour = col;
-        solarWorld = world;
-
-        world.drawSolarObjectAbout(distance, 0.0, objectDiameter, col, parent.getDistance(), parent.getAngle());
-    }
-
 
     /**
      * @param moonDistance the distance of the object to its planet.
