@@ -5,6 +5,14 @@ public class Planet extends SolarThing{
     private double distance;
     private double velocity;
 
+    
+    /**
+     * @param planetID The name of the planet.
+	 * @param planetDistance The distance of the object to the sun.
+	 * @param diameter The diameter of the object in the solar system.
+	 * @param colour The colour of the object in the solar system.
+	 * @param solarSystem The solar system in which the object exists.
+	 */
     public Planet(String planetID, double planetDistance, double diameter, String colour, SolarSystem solarSystem, double v)
     {
         super(planetDistance, diameter, colour, solarSystem);
@@ -20,13 +28,21 @@ public class Planet extends SolarThing{
         solarWorld.drawSolarObject(distance, angle, diameter, colour);
     }
 
+    
+    /**
+     * @return distance The distance of the planet to the sun.
+	 */
     public double getDistance()
     {
-        return this.distance;
+        return distance;
     }
 
+    
+    /**
+     * @return angle The angle (in degrees) that represents how far the planet is around its orbit of the sun.
+	 */
     public double getAngle()
     {
-        return this.angle;
+        return angle;
     }
 }
