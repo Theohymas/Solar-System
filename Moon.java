@@ -6,6 +6,13 @@ public class Moon extends SolarThing{
     private Planet parentPlanet;
     private double velocity;
 
+    /**
+     * @param moonID The name of the moon.
+	 * @param moonDistance The distance of the moon to the planet.
+	 * @param diameter The diameter of the moon in the solar system.
+	 * @param colour The colour of the moon in the solar system.
+	 * @param solarSystem The solar system in which the object exists.
+	 */
     public Moon(String moonID, double moonDistance, double diameter, String colour, SolarSystem solarSystem, Planet parent, double v)
     {
         super(moonDistance, parent.getDistance(), diameter, colour, solarSystem);
@@ -14,8 +21,6 @@ public class Moon extends SolarThing{
         distance = moonDistance;
         parentPlanet = parent;
         velocity = v;
-
-        solarSystem.drawSolarObjectAbout(distance, 0.0, diameter, colour, parent.getDistance(), parent.getAngle());
     }
 
     public void move()

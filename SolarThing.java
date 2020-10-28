@@ -1,4 +1,4 @@
-public class SolarThing{
+abstract  class SolarThing{
 
     double diameter;
     String colour;
@@ -19,6 +19,16 @@ public class SolarThing{
         world.drawSolarObject(distance, 0.0, diameter, colour);
     }
 
+    public SolarThing(double distance, double objectDiameter, String col, SolarSystem world, Planet parent)
+    {
+        diameter = objectDiameter;
+        colour = col;
+        solarWorld = world;
+
+        world.drawSolarObjectAbout(distance, 0.0, objectDiameter, col, parent.getDistance(), parent.getAngle());
+    }
+
+
     /**
      * @param moonDistance the distance of the object to its planet.
 	 * @param planetDistance The distance of the object to the sun.
@@ -35,7 +45,5 @@ public class SolarThing{
         world.drawSolarObjectAbout(moonDistance, 0.0, diameter, colour, planetDistance, 0.0);
     }
 
-    public void move()
-    {
-    }
+    abstract protected void move();
 }

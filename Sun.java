@@ -6,6 +6,11 @@ public class Sun extends SolarThing{
     public Sun(double diameter, String colour, SolarSystem solarSystem)
     {
         super(0.0, diameter, colour, solarSystem);
-        solarSystem.drawSolarObject(distance, angle, diameter, colour);
+        // solarSystem.drawSolarObject(distance, angle, diameter, colour);
+    }
+
+    public void move()
+    {
+        angle = angle;
     }
 }

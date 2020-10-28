@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 
-
 public class Driver{
 
     public static void main(String[] args)
@@ -42,7 +41,8 @@ public class Driver{
 
         while(true)
         {
-            Sun sun1 = new Sun(50.0, "YELLOW", world);
+            Sun sun = new Sun(50.0, "YELLOW", world);
+            solarList.add(sun);
 
             for( SolarThing object: solarList)
             {
