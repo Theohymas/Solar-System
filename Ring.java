@@ -6,7 +6,7 @@ public class Ring extends SolarThing{
 
     public Ring(double ringDistance, double thickness, String colour, SolarSystem solarSystem, Planet parent, double v)
     {
-        super(ringDistance, thickness, colour , solarSystem, parent, v);
+        super(ringDistance, thickness, colour , solarSystem);
 
         distance = ringDistance;
         parentPlanet = parent;
